@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import datetime
 import os.path
 
 
@@ -14,7 +15,7 @@ import os.path
 # - поле возраст является числом от 10 до 99
 #
 # В результате проверки нужно сформировать два файла
-# - registrations_good.log для правильных данных, записывать строки как есть
+# - registrations_good.log для правильных данных, записывать строки как есть,
 # - registrations_bad.log для ошибочных, записывать строку и вид ошибки.
 #
 # Для валидации строки данных написать метод, который может выкидывать исключения:
@@ -45,7 +46,7 @@ class NotNameError(Exception):
 class NotEmailError(Exception):
     pass
 
-
+t0 = datetime.datetime.now()
 file = 'C:\\Users\\DellWorkStation\\PycharmProjects\\TelegramBots\\pythonProject\\lesson10\\registrations.txt'
 good_reg_file = 'registrations_good.log'
 bad_reg_file = 'registrations_bad.log'
@@ -80,3 +81,5 @@ with open(file, 'r', encoding='utf8') as file_for_check:
         finally:
             l += 1
     f1.close(),f2.close()
+t1 = datetime.datetime.now()
+print(t1-t0)
