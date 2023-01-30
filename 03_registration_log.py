@@ -55,7 +55,7 @@ f1, f2 = open(good_reg_file, 'w', encoding='utf8'), open(bad_reg_file, 'w',encod
 f1.close(), f2.close()
 
 l = 1
-# TODO здесь ваш код
+# TODO здесь ваш код fixed
 with open(file, 'r', encoding='utf8') as file_for_check:
 
     f1, f2 = open(good_reg_file, 'a',encoding='utf8'), open(bad_reg_file, 'a',encoding='utf8')
