@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os.path
 
 # Есть файл с протоколом регистраций пользователей на сайте - registrations.txt
 # Каждая строка содержит: ИМЯ ЕМЕЙЛ ВОЗРАСТ, разделенные пробелами
@@ -21,10 +22,18 @@
 # - поле емейл НЕ содержит @ и .(точку): NotEmailError (кастомное исключение)
 # - поле возраст НЕ является числом от 10 до 99: ValueError
 # Вызов метода обернуть в try-except.
+class NotNameError():
+    pass
 
+file = 'C:\\Users\\DellWorkStation\\PycharmProjects\\TelegramBots\\pythonProject\\lesson10\\registrations.txt'
+l = 1
 # TODO здесь ваш код
-with open ('registrations.txt','r') as file_check:
+with open (file,'r',encoding='utf8') as file_check:
     for line in file_check:
         line = line [:-1]
-        name, email, age = line.split(' ')
-        print(name,email,age)
+        try:
+            name, email, age = line.split(' ')
+            print(l,name,email,age)
+            l+=1
+        except ValueError:
+            print('Lack of data')
