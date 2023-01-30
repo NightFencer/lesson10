@@ -22,7 +22,7 @@
 # - поле возраст НЕ является числом от 10 до 99: ValueError
 # Вызов метода обернуть в try-except.
 
-# TODO здесь ваш код
+# TODO здесь ваш код СДЕЛАЛ В ФАЙЛЕ PROBE.PY
 with open ('registrations.txt','r') as file_check:
     for line in file_check:
         line = line [:-1]
