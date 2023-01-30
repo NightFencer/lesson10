@@ -25,6 +25,7 @@ import os.path
 class NotNameError():
     pass
 
+
 file = 'C:\\Users\\DellWorkStation\\PycharmProjects\\TelegramBots\\pythonProject\\lesson10\\registrations.txt'
 l = 1
 # TODO здесь ваш код
